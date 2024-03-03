@@ -1,0 +1,45 @@
+.header-box
+{
+    display: table;
+    width: 100%;
+    margin: 25px 0;
+}
+
+.header-cell{
+    display: table-cell;
+    width: 25%;
+}
+
+#header {
+    font-weight: 800;
+    text-shadow: 3px 2px lightgray;
+}
+
+.BoxFormatting {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 20px lightgrey;
+    padding: 35px;
+    text-align: center;
+}
+
+#LoggedInUserName
+{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form-inline .form-control{
+    margin-right: 15px;
+}
+
+.list-group-item{
+    display: flex;
+}
+
+.list-header-footer
+{
+	font-weight: 700;
+    margin-bottom: 0;
+    overflow-y: scroll;
+}

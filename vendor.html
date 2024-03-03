@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quality Vegies</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/common.css">
+  <script src="scripts/jquery.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header-box">
+    <p id="onlyAdmin" class="header-cell" style="visibility: hidden;">
+      <a href="admin.html" class="btn btn-primary">Admin Dashboard</a>
+    </p>
+    <h2 id="header" class="header-cell" style="width: 50%;"><center>Quality Veggies - Vendor Stock</center></h2>
+    <p class="header-cell" style="text-align: right;">
+      Welcome <span id="LoggedInUserName"></span>
+      <a onclick="Logout()" class="btn btn-primary">Logout</a>
+    </p>
+  </div>
+  <hr>
+  <form id="form-stock" class="form-inline BoxFormatting">
+    <div class="form-group">
+      <label for="market">Market:</label>
+      <select class="form-control" id="market" placeholder="Select market" name="market" required>
+        <option>JM Road</option>
+        <option>Kothrud</option>
+        <option>Swargate</option>
+        <option>Deccan</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="stock_date">Stock Date:</label>
+      <input type="date" class="form-control" id="stock_date" placeholder="Select stock date" name="stock_date" pattern="\d{2}-\d{2}-\d{4}" required>
+    </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="cost">Cost:</label>
+      <input type="text" class="form-control" id="cost" placeholder="Enter cost" name="cost" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  <hr>
+  <div class="form-group">
+    <input type="text" class="form-control" id="filterStocks" style="width: 30%; display: inline-block;" placeholder="Filter Stock" name="filterStocks">
+    <i class="glyphicon glyphicon-search" style="margin-left: -30px;"></i></input>
+  </div>
+  <ul class="list-group list-header-footer">
+    <li class="list-group-item">
+      <span style="width: 5%;"></span>
+      <span style="width: 15%;">Stock Date</span>
+      <span style="width: 25%;">Market</span>
+      <span style="width: 35%;">Name</span>
+      <span style="width: 20%;">Cost (per unit)</span>
+    </li>
+  </ul>
+  <ul id="stock_list" class="list-group" style="max-height: 175px;overflow-y: scroll;"></ul>
+</div>
+<div style="position: fixed;bottom: 0;padding: 5px;width: 100%;background-color: lightsteelblue;text-align: center;">
+  Designed and Developed by Vipul Krushna Belhekar. All copyrights are reserved &copy;2024-2025
+</div>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/vendor.js"></script>
+</body>
+</html>
